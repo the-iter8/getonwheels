@@ -1,0 +1,118 @@
+/* 
+Colors -   
+red-trans-2: #d4000041;
+red-trans: #d40000a4;
+red: #d40000;
+blue: #1b232e;
+crusta-trans-2: #ea8c5525;
+crusta-trans: #ea8c5590;
+crusta: #ea8c55;
+white: #ffffff; 
+
+Align - Left, right, center, justify
+Sizes -
+xxs: 0.2em;
+xxs: 0.3em;
+xs: 0.5em;
+sm: 1em;
+md: 1.5em;
+lg: 2em;
+xl: 2.5em;
+xxl: 3em;
+*/
+
+.red-trans-2 {
+  color: var(--main-red-trans-2);
+}
+
+.red-trans {
+  color: var(--main-red-trans);
+}
+
+.red {
+  color: var(--main-red);
+}
+
+.blue {
+  color: var(--dark-blue);
+}
+
+.crusta-trans-2 {
+  color: var(--crusta-trans-2);
+}
+
+.crusta-trans {
+  color: var(--crusta-trans);
+}
+
+.crusta {
+  color: var(--crusta);
+}
+
+.white {
+  color: var(--white);
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.xxxs {
+  font-size: 1.1rem;
+}
+
+.xxs {
+  font-size: var(--xxs);
+}
+
+.xs {
+  font-size: var(--xs);
+}
+
+.sm {
+  font-size: var(--sm);
+}
+
+.md {
+  font-size: var(--md);
+}
+
+.lg {
+  font-size: var(--lg);
+}
+
+.xl {
+  font-size: var(--xl);
+}
+
+.xxl {
+  font-size: var(--xxl);
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.justify {
+  text-align: justify;
+}

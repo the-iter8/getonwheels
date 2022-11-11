@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  padding: var(--xs) var(--sm);
+  justify-content: space-between;
+  background-color: var(--dark-blue);
+}
+.logo {
+  display: flex;
+}
+.navbarRight {
+  gap: 5%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
