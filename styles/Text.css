@@ -15,10 +15,14 @@ xxs: 0.2em;
 xxs: 0.3em;
 xs: 0.5em;
 sm: 1em;
-md: 1.5em;
-lg: 2em;
-xl: 2.5em;
-xxl: 3em;
+md: 1.1em;
+lg: 1.3em;
+xl: 1.8em;
+xxl: 2em;
+xxxl : 2.5em;
+huge: 3em;
+sub-heading: 3.5em;
+heading: 4.5em;
 */
 
 .red-trans-2 {
@@ -101,6 +105,20 @@ xxl: 3em;
   font-size: var(--xxl);
 }
 
+.xxxl {
+  font-size: var(--xxxl);
+}
+
+.huge {
+  font-size: var(--huge);
+}
+.sub-heading {
+  font-size: 3.5em;
+}
+.heading {
+  font-size: 4.5em;
+}
+
 .left {
   text-align: left;
 }
@@ -115,4 +133,8 @@ xxl: 3em;
 
 .justify {
   text-align: justify;
+}
+
+.secondary {
+  font-family: 'Lato', sans-serif;
 }

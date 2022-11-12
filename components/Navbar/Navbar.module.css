@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  padding: var(--xs) var(--sm);
+  padding: var(--sm) var(--md);
   justify-content: space-between;
   background-color: var(--dark-blue);
 }

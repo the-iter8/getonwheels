@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
+
 * {
   border: 0;
   padding: 0;
@@ -12,26 +13,39 @@
   --main-red: #d40000;
 
   --dark-blue: #1b232e;
+  --space-blue: #2c5a65;
 
   --crusta-trans-2: #ea8c5525;
   --crusta-trans: #ea8c5590;
+
   --crusta: #ea8c55;
-  --white: #ffffff;
+  --white: #f7f3e3;
 
   --xxs: 0.2em;
   --xxs: 0.3em;
   --xs: 0.5em;
   --sm: 1em;
   --md: 1.1em;
-  --lg: 1.2em;
-  --xl: 2.3em;
-  --xxl: 3em;
+  --lg: 1.3em;
+  --xl: 1.8em;
+  --xxl: 2em;
+  --xxxl: 2.5em;
+  --huge: 3em;
 }
-
-
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  outline: 2px solid green;
+}

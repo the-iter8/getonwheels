@@ -6,15 +6,14 @@
   gap: var(--xs);
   cursor: pointer;
   color: var(--crusta);
-  padding: var(--xxs) var(--sm);
+
   border-radius: 0.2em;
   background-color: inherit;
   outline: 2px solid inherit;
 }
-/* Btns might have text that contains big text */
-/* define global classes for the text/headings. */
 
-.btn:hover {
+.btn:hover,
+.outlined {
   background-color: var(--crusta-trans-2);
   outline: 2px solid var(--crusta-trans);
 }

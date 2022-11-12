@@ -3,12 +3,17 @@ import styles from './Button.module.css';
 import Text from '../Text/Text';
 
 export default function Button(props) {
-  const { children, icon, id } = props;
+  const { children, icon, id, outlined, autofocus, fontSize, size } = props;
+  const padding = size == 'large' ? '1em 2em' : '0.6em 1.2em';
 
   return (
-    <button id={id} className={styles.btn}>
+    <button
+      id={id}
+      style={{ padding: padding }}
+      className={`${styles.btn} ${outlined && styles.outlined}`}
+    >
       {icon}
-      <Text color='crusta'>{children}</Text>
+      <Text size={fontSize}>{children}</Text>
     </button>
   );
 }

@@ -9,14 +9,14 @@ export default function Hamburger(props) {
   return (
     <>
       <input id={styles.menuToggle} type='checkbox' />
-      <label className={styles.menuBtn} for={styles.menuToggle}>
+      <label className={styles.menuBtn} htmlFor ={styles.menuToggle}>
         <span></span>
       </label>
-      <ul class={styles.menuBox}>
+      <ul className={styles.menuBox}>
         <li>
           {options.map((item) => {
             return (
-              <Link href={item.link}>
+              <Link href={item.link} key={item.name}>
                 <Text variant='p' className={styles.menuItem}>
                   {item.name}
                 </Text>
