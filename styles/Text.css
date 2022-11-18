@@ -56,6 +56,9 @@ heading: 4.5em;
 .white {
   color: var(--white);
 }
+.grey-white {
+  color: var(--grey-white);
+}
 
 .normal {
   font-weight: 400;

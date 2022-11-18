@@ -1,0 +1,29 @@
+.footerUpper {
+  display: flex;
+  gap: var(--huge);
+  color: var(--white);
+  justify-content: space-between;
+  background-color: var(--dark-blue);
+  padding: var(--xxxl) var(--huge);
+}
+.footerUpperText {
+  display: flex;
+  gap: var(--sm);
+  flex-direction: column;
+}
+.footerUpperLogos {
+  color: var(--crusta);
+  display: flex;
+  gap: var(--xxs);
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--huge);
+}
+
+@media only screen and (max-width: 760px) {
+  .footerUpper {
+    flex-direction: column;
+  }
+}

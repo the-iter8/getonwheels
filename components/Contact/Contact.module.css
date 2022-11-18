@@ -35,7 +35,6 @@
   margin-bottom: var(--xxl);
   box-shadow: 2px 2px 14px 1px #00000029;
 
-  /* outline: 2px solid green; */
 }
 .itemTitles {
   display: flex;
