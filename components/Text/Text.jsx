@@ -12,11 +12,12 @@ const Text = (props) => {
   } = props;
 
   const classes = [
+    align || 'inherit',
     font || 'primary',
     weight || 'medium',
     size || 'md',
-    color || null,
-    className || null,
+    color || 'inherit',
+    className || "",
   ];
 
   if (variant == 'p' || variant == undefined) {

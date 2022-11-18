@@ -1,39 +1,79 @@
-.root {
+/* Hero */
+.heroRoot {
   gap: var(--huge);
   display: flex;
   padding: 4em 5em;
   align-items: center;
   background-color: var(--dark-blue);
 }
-.rootLeft {
-  width: 60%;
+.heroRootLeft {
   gap: var(--xl);
   display: flex;
   flex-direction: column;
 }
-.rootRight {
-  border: 3px dashed var(--white);
+.heroRootRight {
+  border: 3px solid var(--white);
 }
 .headings {
   display: flex;
   gap: var(--lg);
   flex-direction: column;
 }
-
 .btnSet {
   gap: var(--huge);
   display: flex;
-  
+}
+
+/* Services. */
+.servicesRoot {
+  display: flex;
+  gap: var(--huge);
+  padding: var(--xl);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.itemRoot {
+  display: flex;
+  gap: var(--xs);
+  align-items: center;
+  margin-bottom: var(--xxl);
+  justify-content: center;
+}
+
+.itemTitles {
+  display: flex;
+  gap: var(--xxs);
+  flex-direction: column;
+}
+/* Testimonials */
+.testimonialsRoot {
+  display: flex;
+  gap: var(--sm);
+  flex-direction: column;
+  justify-content: center;
+}
+.testimonialsItem {
+  display: flex;
+  gap: var(--lg);
+  flex-direction: column;
+  padding: var(--huge);
+}
+.testimonialsTitles {
+  display: flex;
+  gap: var(--xxs);
+  flex-direction: column;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1100px) {
-  .root {
+  .heroRoot {
     align-items: center;
     justify-content: center;
-    padding: 2em;
+    padding: var(--xxl);
     background-color: var(--dark-blue);
   }
-  .rootLeft {
+  .heroRootLeft {
     width: 100%;
     align-items: center;
   }

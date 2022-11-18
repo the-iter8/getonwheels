@@ -21,9 +21,9 @@
   --crusta: #ea8c55;
   --white: #f7f3e3;
 
-  --xxs: 0.2em;
+  --xxxs: 0.2em;
   --xxs: 0.3em;
-  --xs: 0.5em;
+  --xs: 0.8em;
   --sm: 1em;
   --md: 1.1em;
   --lg: 1.3em;
@@ -34,7 +34,8 @@
 }
 
 a {
-  color: inherit;
+  color: blue;
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -48,4 +49,8 @@ a {
   flex-direction: row;
   align-items: center;
   outline: 2px solid green;
+}
+.Hr {
+  margin-bottom: var(--huge);
+  border-bottom: 2px solid black;
 }

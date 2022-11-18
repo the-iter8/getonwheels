@@ -1,0 +1,54 @@
+.contactRoot {
+  display: flex;
+  flex-direction: column;
+}
+.contactUpper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: var(--xxl);
+}
+.contactForm {
+  display: flex;
+  gap: var(--lg);
+  flex-direction: column;
+}
+.contactMaps {
+  width: 40%;
+}
+.googleMaps {
+  width: 100%;
+}
+
+.contactLower {
+  display: flex;
+  padding: 3rem;
+  flex-direction: column;
+  gap: var(--huge);
+}
+.itemRoot {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  gap: var(--huge);
+  padding: var(--xl);
+  margin-bottom: var(--xxl);
+  box-shadow: 2px 2px 14px 1px #00000029;
+
+  /* outline: 2px solid green; */
+}
+.itemTitles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--xxxs);
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--lg);
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lg);
+}
