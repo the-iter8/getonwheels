@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../pages/_app';
 import styles from '../styles/home.module.css';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import Text from '../components/Text/Text';
@@ -122,7 +121,7 @@ export default function Home() {
           </Text>
           <SettingsSuggestIcon sx={{ fontSize: 40 }}></SettingsSuggestIcon>
         </div>
-        
+
         <Container>
           <Row>
             <Col sm={12} md={6} lg={4}>

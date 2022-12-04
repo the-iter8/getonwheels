@@ -43,7 +43,7 @@ export default function Footer() {
   };
 
   function Column({ colName, items }) {
-    console.log(items);
+   
     return (
       <Col className={styles.column} xs={6} sm={6} lg={4}>
         <Text size='md'>{colName}</Text>
