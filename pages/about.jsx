@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Text from '../components/Text/Text';
 import React, { useContext } from 'react';
-import styles from '../styles/AboutUs.module.css';
+import styles from '../styles/about.module.css';
 import { UserContext } from '../pages/_app';
 import { Container, Row, Col } from 'react-grid-system';
 

@@ -8,7 +8,7 @@ import Text from '../components/Text/Text';
 import { Container, Row, Col } from 'react-grid-system';
 
 import img from '../public/cardimg.jpg';
-import styles from '../styles/Services.module.css';
+import styles from '../styles/services.module.css';
 
 export default function Services() {
   const { isMobile } = useContext(UserContext);
