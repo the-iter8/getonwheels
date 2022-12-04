@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../pages/_app';
-import styles from '../styles/home.module.css';
+import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 
 import Text from '../components/Text/Text';
