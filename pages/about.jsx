@@ -1,11 +1,88 @@
+import Image from 'next/image';
+import Text from '../components/Text/Text';
 import React, { useContext } from 'react';
 import styles from '../styles/aboutUs.module.css';
-import Text from '../components/Text/Text';
 import { UserContext } from '../pages/_app';
 import { Container, Row, Col } from 'react-grid-system';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+import Logo from '../public/Brands/bosch.png';
+import Castrol from '../public/Brands/castrol.png';
+import Gainda from '../public/Brands/gainda.jpeg';
 export default function AboutUs() {
   const { isMobile } = useContext(UserContext);
+  function Brands() {
+    function Item({ children }) {
+      return <div className={styles.testimonialsItem}>{children}</div>;
+    }
+    return (
+      <div className={styles.brandsRoot}>
+        <Text
+          size={isMobile ? 'xxxl' : 'huge'}
+          font='secondary'
+          weight='semi-bold'
+          align='center'
+        >
+          Brands we use.
+        </Text>
+
+        <div>
+          <Swiper
+            // install Swiper modules
+            navigation={isMobile ? false : true}
+            pagination={{ clickable: true }}
+            spaceBetween={2}
+            slidesPerView={isMobile ? 1 : 4}
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log('slide change')}
+          >
+            <SwiperSlide>
+              <Item>
+                <Image alt='logo' src={Logo} height={60} />
+              </Item>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item>
+                <Image alt='logo' src={Castrol} height={60} />
+              </Item>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item>
+                <Image alt='logo' src={Logo} height={60} />
+              </Item>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item>
+                <Image alt='logo' src={Gainda} height={60} />
+              </Item>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item>
+                <Image alt='logo' src={Castrol} height={60} />
+              </Item>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item>
+                <Image alt='logo' src={Castrol} height={60} />
+              </Item>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item>
+                <Image alt='logo' src={Castrol} height={60} />
+              </Item>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </div>
+    );
+  }
   function About() {
     function Item() {
       return (
@@ -41,9 +118,7 @@ export default function AboutUs() {
             </Text>
           </div>
         </div>
-        <div>
-          <Text align='center'>-</Text>
-        </div>
+
         <Container>
           <Row gutterWidth={50}>
             <Col sm={12} md={6} lg={3} className={styles.column}>
@@ -125,9 +200,11 @@ export default function AboutUs() {
       </div>
     );
   }
+
   return (
     <>
       <About></About>
+      <Brands></Brands>
       <Story></Story>
     </>
   );

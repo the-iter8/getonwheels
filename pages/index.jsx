@@ -19,7 +19,8 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import Rating from '@mui/material/Rating';
 import Avatar from '@mui/material/Avatar';
 import OilBarrelIcon from '@mui/icons-material/OilBarrel';
-
+import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
+import RateReviewIcon from '@mui/icons-material/RateReview';
 export default function Home() {
   const { isMobile } = useContext(UserContext);
 
@@ -67,14 +68,17 @@ export default function Home() {
           </div>
         </div>
         {!isMobile && (
-          <div className={styles.heroRootRight}>
-            <video
-              loop
-              muted
-              autoPlay
-              src='../Video.mp4'
-              width={'100%'}
-            ></video>
+          <div className={styles.heroVideoFrame}>
+            <div className={styles.heroRootRight}>
+              <video
+                loop
+                muted
+                autoPlay
+                src='../Video.mp4'
+                width={'100%'}
+                className={styles.video}
+              ></video>
+            </div>
           </div>
         )}
       </div>
@@ -106,41 +110,47 @@ export default function Home() {
     }
 
     return (
-      <Container className={styles.servicesRoot}>
-        <Text
-          size={isMobile ? 'xxxl' : 'huge'}
-          font='secondary'
-          weight='semi-bold'
-          align='center'
-        >
-          Services
-        </Text>
-        <Row>
-          <Col sm={12} md={6} lg={4}>
-            <Item></Item>
-          </Col>
-          <Col sm={12} md={6} lg={4}>
-            <Item></Item>
-          </Col>
-          <Col sm={12} md={6} lg={4}>
-            <Item></Item>
-          </Col>
-          <Col sm={12} md={6} lg={4}>
-            <Item></Item>
-          </Col>
-          <Col sm={12} md={6} lg={4}>
-            <Item></Item>
-          </Col>
-          <Col sm={12} md={6} lg={4}>
-            <Item></Item>
-          </Col>
-        </Row>
+      <div className={styles.servicesRoot}>
+        <div className={styles.titleContainer}>
+          <Text
+            size={isMobile ? 'xxxl' : 'huge'}
+            font='secondary'
+            weight='semi-bold'
+            align='center'
+          >
+            Services
+          </Text>
+          <SettingsSuggestIcon sx={{ fontSize: 40 }}></SettingsSuggestIcon>
+        </div>
+        
+        <Container>
+          <Row>
+            <Col sm={12} md={6} lg={4}>
+              <Item></Item>
+            </Col>
+            <Col sm={12} md={6} lg={4}>
+              <Item></Item>
+            </Col>
+            <Col sm={12} md={6} lg={4}>
+              <Item></Item>
+            </Col>
+            <Col sm={12} md={6} lg={4}>
+              <Item></Item>
+            </Col>
+            <Col sm={12} md={6} lg={4}>
+              <Item></Item>
+            </Col>
+            <Col sm={12} md={6} lg={4}>
+              <Item></Item>
+            </Col>
+          </Row>
+        </Container>
         <Link href='/services'>
           <Button fontSize='lg' outlined>
             See all services.
           </Button>
         </Link>
-      </Container>
+      </div>
     );
   }
 
@@ -167,14 +177,17 @@ export default function Home() {
     }
     return (
       <div className={styles.testimonialsRoot}>
-        <Text
-          size={isMobile ? 'xxxl' : 'huge'}
-          font='secondary'
-          weight='semi-bold'
-          align='center'
-        >
-          Testimonials
-        </Text>
+        <div className={styles.titleContainer}>
+          <Text
+            size={isMobile ? 'xxxl' : 'huge'}
+            font='secondary'
+            weight='semi-bold'
+            align='center'
+          >
+            Testimonials
+          </Text>
+          <RateReviewIcon sx={{ fontSize: 40 }}></RateReviewIcon>
+        </div>
         <div>
           <Swiper
             // install Swiper modules
@@ -216,7 +229,6 @@ export default function Home() {
       <Hr></Hr>
 
       <Contact></Contact>
-      <Hr></Hr>
     </>
   );
 }

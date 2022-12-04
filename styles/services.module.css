@@ -1,0 +1,47 @@
+.servicesRoot {
+  display: flex;
+  gap: var(--huge);
+  flex-direction: column;
+  padding: var(--huge);
+  background-image: var(--service-bg);
+}
+
+.servicesUpper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--huge);
+  gap: var(--xs);
+  z-index: 10000;
+}
+.cardRoot {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: var(--huge);
+  box-shadow: var(--card-shadow);
+}
+.chipContainer {
+  display: flex;
+  gap: var(--sm);
+}
+.quoteChip {
+  align-self: flex-end;
+}
+.cardTexts {
+  display: flex;
+  gap: var(--md);
+  word-break: break-all;
+  flex-direction: column;
+  padding: var(--xs) var(--lg);
+}
+.cardImage {
+  width: 100%;
+  height: min-content;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .servicesUpper {
+    padding: 0;
+  }
+}

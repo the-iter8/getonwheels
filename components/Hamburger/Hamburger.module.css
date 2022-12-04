@@ -1,4 +1,3 @@
-
 #menuToggle {
   opacity: 0;
 }
@@ -19,13 +18,13 @@
 }
 .menuBtn {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 1.5rem;
+  right: 1.5rem;
 
-  width: 26px;
-  height: 26px;
+  width: 1.5em;
+  height: 1.5em;
   cursor: pointer;
-  z-index: 1;
+  z-index: 99999;
 }
 .menuBtn > span,
 .menuBtn > span::before,
@@ -51,25 +50,21 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 300px;
+  width: 30%;
   height: 100%;
-  margin: 0;
-  padding: 80px 0;
+  padding: 20% 0;
   list-style: none;
-  background-color: #eceff1;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  background-color: var(--dark-blue);
+  z-index: 99998;
   transition-duration: 0.25s;
 }
 .menuItem {
   display: block;
   padding: 12px 24px;
-  color: #333;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
+  color: var(--crusta);
   transition-duration: 0.25s;
 }
 .menuItem:hover {
-  background-color: #cfd8dc;
+  color: var(--dark-blue);
+  background-color: var(--crusta);
 }

@@ -7,6 +7,7 @@ import styles from './Contact.module.css';
 import TextField from '@mui/material/TextField';
 import { Container, Row, Col } from 'react-grid-system';
 import MarkUnreadChatAltIcon from '@mui/icons-material/MarkUnreadChatAlt';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 
 export default function Contact() {
   const { isMobile } = useContext(UserContext);
@@ -14,14 +15,19 @@ export default function Contact() {
     return (
       <div className={styles.contactUpper}>
         <div className={styles.contactForm}>
-          <Text
-            size={isMobile ? 'xxxl' : 'huge'}
-            weight='bold'
-            font='secondary'
-            align='left'
-          >
-            Contact Us
-          </Text>
+          <div className={styles.titleContainer}>
+            <Text
+              size={isMobile ? 'xxxl' : 'huge'}
+              weight='bold'
+              font='secondary'
+              align='left'
+            >
+              Contact Us
+            </Text>
+            <ConnectWithoutContactIcon
+              sx={{ fontSize: 40 }}
+            ></ConnectWithoutContactIcon>
+          </div>
           <Text>Our team really loves you but we are not gay.</Text>
           <form action='' method='post' className={styles.column}>
             <div className={styles.row}>
@@ -66,14 +72,14 @@ export default function Contact() {
         <div className={styles.itemRoot}>
           <div>
             <MarkUnreadChatAltIcon
-              sx={{ fontSize: 30 }}
+              sx={{ fontSize: 40 }}
             ></MarkUnreadChatAltIcon>
           </div>
           <div className={styles.itemTitles}>
             <Text weight='semi-bold' size='lg' font='secondary'>
               Chat to blah
             </Text>
-            <Text weight='light' size='sm' color='red-trans'>
+            <Text weight='light' size='sm' >
               Speak lmao?
             </Text>
             <Text variant='a' weight='light' size='sm'>
@@ -116,9 +122,9 @@ export default function Contact() {
   }
 
   return (
-    <>
+    <div className={styles.contactRoot}>
       <ContactUpper></ContactUpper>
       <ContactLower></ContactLower>
-    </>
+    </div>
   );
 }

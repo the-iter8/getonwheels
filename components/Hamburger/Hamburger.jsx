@@ -9,7 +9,7 @@ export default function Hamburger(props) {
   return (
     <>
       <input id={styles.menuToggle} type='checkbox' />
-      <label className={styles.menuBtn} htmlFor ={styles.menuToggle}>
+      <label className={styles.menuBtn} htmlFor={styles.menuToggle}>
         <span></span>
       </label>
       <ul className={styles.menuBox}>
@@ -17,7 +17,7 @@ export default function Hamburger(props) {
           {options.map((item) => {
             return (
               <Link href={item.link} key={item.name}>
-                <Text variant='p' className={styles.menuItem}>
+                <Text variant='p' className={styles.menuItem} weight='bold'>
                   {item.name}
                 </Text>
               </Link>

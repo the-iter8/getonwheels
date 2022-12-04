@@ -1,0 +1,11 @@
+.chipRoot {
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 6px;
+  padding: var(--xxs) var(--xs);
+  outline: 2px solid var(--crusta);
+}
+
+.chipRoot:hover {
+  background-color: var(--crusta-trans-2);
+}

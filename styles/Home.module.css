@@ -2,17 +2,51 @@
 .heroRoot {
   gap: var(--huge);
   display: flex;
-  padding: 4em 5em;
+  padding: 6%;
   align-items: center;
   background-color: var(--dark-blue);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-image: url('../public/HeroBack.png');
 }
 .heroRootLeft {
   gap: var(--xl);
   display: flex;
   flex-direction: column;
 }
-.heroRootRight {
-  border: 3px solid var(--white);
+/* For The Frames around the video. */
+.heroRootRight::before {
+  position: absolute;
+  left: -5.9%;
+  top: -10%;
+  width: 110%;
+  height: 110%;
+  content: '';
+  transform: rotate(-15deg);
+  border-radius: 8px;
+  border: 4px solid var(--crusta-trans);
+}
+.heroRootRight::after {
+  position: absolute;
+  left: -5.9%;
+  top: -10%;
+  width: 110%;
+  height: 110%;
+  content: '';
+  transform: rotate(-8deg);
+  border-radius: 8px;
+  border: 4px dashed var(--crusta-trans);
+}
+
+.heroVideoFrame {
+  z-index: 100;
+  transform: rotate(0deg);
+  border-radius: 8px;
+  border: 4px solid var(--crusta-trans);
+}
+/*  */
+.video {
+  border-radius: 8px;
 }
 .headings {
   display: flex;
@@ -29,16 +63,21 @@
   display: flex;
   gap: var(--huge);
   padding: var(--xl);
+  
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: var(--service-bg);
 }
 .itemRoot {
   display: flex;
   gap: var(--xs);
+  padding: var(--lg);
   align-items: center;
   margin-bottom: var(--xxl);
   justify-content: center;
+  background-color: var(--crusta-trans-2);
 }
 
 .itemTitles {
@@ -52,6 +91,7 @@
   gap: var(--sm);
   flex-direction: column;
   justify-content: center;
+  background-image: var(--testimonial-bg);
 }
 .testimonialsItem {
   display: flex;
@@ -64,6 +104,14 @@
   gap: var(--xxs);
   flex-direction: column;
   align-items: center;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  gap: var(--lg);
 }
 
 @media only screen and (max-width: 1100px) {

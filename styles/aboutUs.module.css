@@ -4,6 +4,7 @@
   gap: var(--huge);
   flex-direction: column;
   padding: var(--huge);
+  background-image: var(--service-bg);
 }
 .aboutItem {
   display: flex;
@@ -28,6 +29,20 @@
   gap: var(--sm);
   align-items: center;
   flex-direction: column;
+}
+
+/* Testimonials */
+.brandsRoot {
+  display: flex;
+  gap: var(--sm);
+  padding: var(--lg) 0;
+  margin: var(--lg) 0;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.testimonialsItem {
+  padding: var(--huge);
 }
 
 @media only screen and (max-width: 1100px) {

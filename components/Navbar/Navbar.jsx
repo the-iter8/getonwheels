@@ -10,6 +10,7 @@ import styles from './Navbar.module.css';
 
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Hamburger from '../Hamburger/Hamburger';
+
 export default function Navbar() {
   const { isMobile } = useContext(UserContext);
   const options = [
@@ -31,6 +32,17 @@ export default function Navbar() {
     },
   ];
 
+  // const scrollProgress = document.getElementById('scroll-progress');
+  // const height =
+  //   document.documentElement.scrollHeight -
+  //   document.documentElement.clientHeight;
+
+  // window.addEventListener('scroll', () => {
+  //   const scrollTop =
+  //     document.body.scrollTop || document.documentElement.scrollTop;
+  //   scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
+  // });
+
   function NavBarPc() {
     return (
       <>
@@ -42,25 +54,30 @@ export default function Navbar() {
           );
         })}
         {/* To add whatsapp open Link */}
-        <Button fontSize='md' icon={<WhatsAppIcon />}>
-          Whatsapp
-        </Button>
+        <Link href='https://wa.me/'>
+          <Button fontSize='md' icon={<WhatsAppIcon />}>
+            Whatsapp
+          </Button>
+        </Link>
       </>
     );
   }
 
   return (
-    <div className={styles.navbar}>
-      <div className={styles.logo}>
-        <Image alt='Logo' src={Logo} height={60}></Image>
+    <>
+      <div className={styles.navbar}>
+        <div className={styles.logo}>
+          <Image alt='Logo' src={Logo} height={60}></Image>
+        </div>
+        <div className={styles.navbarRight}>
+          {!isMobile ? (
+            <NavBarPc></NavBarPc>
+          ) : (
+            <Hamburger options={options}></Hamburger>
+          )}
+        </div>
       </div>
-      <div className={styles.navbarRight}>
-        {!isMobile ? (
-          <NavBarPc></NavBarPc>
-        ) : (
-          <Hamburger options={options}></Hamburger>
-        )}
-      </div>
-    </div>
+      <div id='scroll-progress'></div>
+    </>
   );
 }
